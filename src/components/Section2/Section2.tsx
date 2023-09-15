@@ -1,19 +1,18 @@
 import React from "react";
+import useStyles from "./Section2.style";
 const Section2: React.FC = () => {
+  const { classes, cx } = useStyles();
+
   return (
-    <div className="py-60">
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde
-      reprehenderit, provident tenetur quis nihil placeat explicabo quas, quo
-      voluptates hic pariatur, quod molestiae sequi cupiditate minus illo
-      voluptatibus. Iste facere magnam doloribus, odio sapiente sit! Accusamus
-      cum exercitationem culpa ipsam voluptatem eligendi saepe fugit omnis
-      facilis ab nihil temporibus sit, dolores ea qui rerum voluptatibus amet
-      delectus distinctio! Nemo, velit deserunt amet blanditiis temporibus
-      voluptatum expedita quia consectetur rerum laboriosam voluptate, labore
-      ad. Iusto tempore magnam, ab laudantium dolor commodi vero soluta
-      excepturi quia amet, dolore dolores suscipit. Veritatis vel in
-      voluptatibus assumenda possimus. Reprehenderit quidem velit repellat illum
-      facilis.
+    <div className={cx(classes.wrapper)}>
+      <div className="py-60 lg:px-28 md:px-20 sm:px-16 px-8">
+        <div className={cx(classes.header, "lg:w-1/3 sm:w-2/3 w-5/6")}>
+          <h2 className="leading-tight">
+            <span className="font-semibold text-yellow">Krisis Pangan </span>
+            yang Melekat di Papua
+          </h2>
+        </div>
+      </div>
     </div>
   );
 };

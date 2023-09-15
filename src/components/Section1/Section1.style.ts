@@ -1,9 +1,14 @@
-import { createStyles, getStylesRef } from "@mantine/core";
+import { createStyles } from "@mantine/core";
 import image from "../../images/bg1.webp";
 
-const useStyles = createStyles((theme) => ({
+type Props = {
+  isHeadingAppear: boolean;
+};
+
+const useStyles = createStyles((theme, { isHeadingAppear }: Props) => ({
   wrapper: {
-    minHeight: "150vh",
+    minHeight: "160vh",
+    overflowX: "clip",
   },
   transition: {
     transition: "all",
@@ -44,6 +49,8 @@ const useStyles = createStyles((theme) => ({
   },
   headingText: {
     fontSize: "60px",
+    transitionDelay: isHeadingAppear ? "1s" : "0s",
+    textShadow: "1px 1px #000000",
 
     [theme.fn.smallerThan("xl")]: {
       fontSize: "40px",
@@ -59,6 +66,7 @@ const useStyles = createStyles((theme) => ({
   },
   describeText: {
     fontSize: "25px",
+    transitionDelay: isHeadingAppear ? "0s" : "1s",
 
     [theme.fn.smallerThan("xl")]: {
       fontSize: "16px",
@@ -67,6 +75,10 @@ const useStyles = createStyles((theme) => ({
     [theme.fn.smallerThan("md")]: {
       fontSize: "12px",
     },
+  },
+  gradient: {
+    height: "60vh",
+    bottom: "-20vh",
   },
 }));
 
