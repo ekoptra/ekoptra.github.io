@@ -7,23 +7,3 @@
 body {
   font-family: "Poppins", sans-serif;
 }
-
-.main {
-  min-height: 110vh;
-}
-
-.scale-effect {
-  transform: scale(1.35);
-}
-
-.duration-2s {
-  transition-duration: 2s;
-}
-
-.scale-effect .main-title {
-  font-size: 30px;
-}
-
-.main-title {
-  font-size: 60px;
-}
