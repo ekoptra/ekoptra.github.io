@@ -1,52 +1,41 @@
 import { FC } from "react";
-import useStyles from "./Section7.style";
-import { Flex, Grid } from "@mantine/core";
+import { Card, Flex, Grid } from "@mantine/core";
 import BarChart from "./BarChart";
+import Container from "../common/Container";
+import TextPenjelasan from "../common/TextPenjelasan";
+import CardChart from "../common/CardChart";
+import TextBold from "../common/TextBold";
 
-const Section7: FC = ({}) => {
-  const { classes, cx } = useStyles();
-
+const Section6: FC = ({}) => {
   return (
-    <div className={cx(classes.wrapper)}>
-      <div className="lg:px-28 md:px-20 sm:px-16 px-8 pt-20">
-        <div className={cx(classes.header, "lg:w-1/3 sm:w-2/3 w-5/6")}>
-          <h2 className="leading-tight">Tingginya Angka Kemiskinan</h2>
-        </div>
+    <Container
+      colorScheme="Dark"
+      header={
+        <>
+          <TextBold className="text-yellow">Krisis Pangan </TextBold>
+          yang Melekat di Papua
+        </>
+      }
+    >
+      <TextPenjelasan>
+        Listrik merupakan pendorong krusial dalam mengamankan pasokan pangan
+        yang mencukupi, bervariasi, dan berkualitas. Akses listrik yang memadai
+        dan stabil sangat penting untuk mendukung ketahanan pangan dengan
+        memastikan produksi, pengolahan, penyimpanan, dan distribusi pangan yang
+        efisien dan berkelanjutan. Namun, hanya sedikit daerah di Papua yang
+        dapat mengakses listrik dengan memadai.
+      </TextPenjelasan>
 
-        <Grid className="mt-16">
-          <Grid.Col span={6}>
-            <p className="text-lg">
-              Orang-orang yang tinggal{" "}
-              <b className="text-yellow">di bawah garis kemiskinan</b> memiliki
-              daya beli yang terbatas sehingga mereka kesulitan untuk mencukupi
-              kebutuhan pokok mereka. Hal ini berdampak pada{" "}
-              <b className="text-yellow">ketahanan pangan</b>.
-            </p>
-          </Grid.Col>
-
-          <Grid.Col span={6}>
-            <div
-              style={{
-                border: "2px solid white",
-              }}
-              className="p-5 rounded-xl"
-            >
+      <Grid className="mt-12" align="center">
+        <Grid.Col span={8}>
+          <CardChart
+            colorScheme="Dark"
+            chart={<BarChart />}
+            height="300px"
+            title="Rasio Elektrifikasi (%) di Indonesia Tahun 2022"
+          >
+            <Flex gap={0} direction="column" align="end" className="pr-3">
               <div>
-                <h3 className="text-center text-lg font-medium">
-                  Provinsi dengan Persentase Kemiskinan di Atas Nilai Nasional
-                  Tahun 2022
-                </h3>
-              </div>
-
-              <div
-                style={{
-                  height: "500px",
-                }}
-              >
-                <BarChart />
-              </div>
-
-              <Flex gap={10} justify="end">
                 <Flex align="center" gap={5}>
                   <div
                     className="h-3 w-3"
@@ -61,13 +50,24 @@ const Section7: FC = ({}) => {
                   ></div>
                   <div className="text-sm">Indonesia Bagian Barat</div>
                 </Flex>
-              </Flex>
-            </div>
-          </Grid.Col>
-        </Grid>
-      </div>
-    </div>
+              </div>
+            </Flex>
+          </CardChart>
+        </Grid.Col>
+
+        <Grid.Col span={4}>
+          <TextPenjelasan className="pl-12">
+            <TextBold className="text-3xl text-yellow">
+              3 dari 34 Provinsi{" "}
+            </TextBold>
+            dengan nilai rasio elektrifikasi terendah ada di{" "}
+            <TextBold>Kawasan Indonesia Timur</TextBold>. Papua termasuk salah
+            satunya
+          </TextPenjelasan>
+        </Grid.Col>
+      </Grid>
+    </Container>
   );
 };
 
-export default Section7;
+export default Section6;

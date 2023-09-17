@@ -57,12 +57,9 @@ const LineChart: FC<LineChartProps> = ({}) => {
       axisTop={null}
       axisRight={null}
       axisBottom={{
-        tickSize: 5,
-        tickPadding: 5,
+        tickSize: 0,
+        tickPadding: 10,
         tickRotation: 0,
-        legend: "Tahun",
-        legendOffset: 50,
-        legendPosition: "middle",
       }}
       axisLeft={null}
       theme={{
