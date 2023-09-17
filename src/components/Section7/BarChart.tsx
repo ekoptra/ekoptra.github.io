@@ -14,21 +14,23 @@ const data = [
 ];
 
 const BarChart: FC<BarChartProps> = ({}) => {
-  const elektrifikasi = useDataStore((state) => state.elektrifikasi);
+  const kemiskinan = useDataStore((state) => state.kemiskinan).slice(0, 16);
+  kemiskinan.reverse();
 
   return (
     <ResponsiveBar
-      data={elektrifikasi.map((e) => ({
+      data={kemiskinan.map((e) => ({
         provinsiShort: e.provinsi_short,
-        elektrifitas: e.elektifitas,
+        kemiskinan: e.kemiskinan,
       }))}
-      keys={["elektrifitas"]}
+      layout="horizontal"
+      keys={["kemiskinan"]}
       indexBy="provinsiShort"
-      margin={{ top: 0, right: 0, bottom: 100, left: 0 }}
+      margin={{ top: 0, right: 0, bottom: 0, left: 100 }}
       padding={0.3}
       valueScale={{ type: "linear" }}
       indexScale={{ type: "band", round: true }}
-      colors={elektrifikasi.map((e) => (e.is_timur ? "#d9d9d9" : "#d2d461"))}
+      colors={kemiskinan.map((e) => (e.is_timur ? "#d9d9d9" : "#d2d461"))}
       borderColor={{
         from: "color",
         modifiers: [["darker", 1.6]],
@@ -36,24 +38,31 @@ const BarChart: FC<BarChartProps> = ({}) => {
       colorBy="indexValue"
       axisTop={null}
       axisRight={null}
-      axisBottom={{
+      axisBottom={null}
+      axisLeft={{
         tickSize: 0,
         tickPadding: 5,
-        tickRotation: -90,
+        tickRotation: 0,
       }}
-      axisLeft={null}
       labelSkipWidth={30}
       labelSkipHeight={12}
       enableGridY={false}
       theme={{
         fontFamily: "Poppins, sens-serif",
         textColor: "white",
+        axis: {
+          ticks: {
+            text: {
+              fontSize: 13,
+            },
+          },
+        },
       }}
       labelTextColor="black"
       tooltip={(label) => (
         <Card>
           <p className="text-sm">
-            {label.data.provinsiShort} : {label.data.elektrifitas}
+            {label.data.provinsiShort} : {label.data.kemiskinan}
           </p>
         </Card>
       )}
