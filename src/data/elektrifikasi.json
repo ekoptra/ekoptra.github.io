@@ -1,0 +1,107 @@
+[
+	{
+		"tahun": "2022",
+		"provinsi_short": "DKI JAKARTA",
+		"provinsi_alt_name": "DKI JAKARTA",
+		"elektifitas": 100,
+		"is_timur": false
+	},
+	{
+		"tahun": "2022",
+		"provinsi_short": "BALI",
+		"provinsi_alt_name": "BALI",
+		"elektifitas": 100,
+		"is_timur": false
+	},
+	{
+		"tahun": "2022",
+		"provinsi_short": "20 PROVINSI LAIN",
+		"provinsi_alt_name": "20 PROVINSI LAIN",
+		"elektifitas": 99.99,
+		"is_timur": false
+	},
+	{
+		"tahun": "2022",
+		"provinsi_short": "NTB",
+		"provinsi_alt_name": "NUSA TENGGARA BARAT",
+		"elektifitas": 99.98,
+		"is_timur": true
+	},
+	{
+		"tahun": "2022",
+		"provinsi_short": "JABAR",
+		"provinsi_alt_name": "JAWA BARAT",
+		"elektifitas": 99.95,
+		"is_timur": false
+	},
+	{
+		"tahun": "2022",
+		"provinsi_short": "SUMSEL",
+		"provinsi_alt_name": "SUMATERA SELATAN",
+		"elektifitas": 99.84,
+		"is_timur": false
+	},
+	{
+		"tahun": "2022",
+		"provinsi_short": "KALBAR",
+		"provinsi_alt_name": "KALIMANTAN BARAT",
+		"elektifitas": 99.52,
+		"is_timur": false
+	},
+	{
+		"tahun": "2022",
+		"provinsi_short": "SULTENG",
+		"provinsi_alt_name": "SULAWESI TENGAH",
+		"elektifitas": 99.35,
+		"is_timur": true
+	},
+	{
+		"tahun": "2022",
+		"provinsi_short": "JATIM",
+		"provinsi_alt_name": "JAWA TIMUR",
+		"elektifitas": 99.32,
+		"is_timur": false
+	},
+	{
+		"tahun": "2022",
+		"provinsi_short": "SULBAR",
+		"provinsi_alt_name": "SULAWESI BARAT",
+		"elektifitas": 99.24,
+		"is_timur": true
+	},
+	{
+		"tahun": "2022",
+		"provinsi_short": "SULTRA",
+		"provinsi_alt_name": "SULAWESI TENGGARA",
+		"elektifitas": 98.66,
+		"is_timur": true
+	},
+	{
+		"tahun": "2022",
+		"provinsi_short": "KALTENG",
+		"provinsi_alt_name": "KALIMANTAN TENGAH",
+		"elektifitas": 97.26,
+		"is_timur": false
+	},
+	{
+		"tahun": "2022",
+		"provinsi_short": "PAPUA",
+		"provinsi_alt_name": "PAPUA",
+		"elektifitas": 96.01,
+		"is_timur": true
+	},
+	{
+		"tahun": "2022",
+		"provinsi_short": "MALUKU",
+		"provinsi_alt_name": "MALUKU",
+		"elektifitas": 93,
+		"is_timur": true
+	},
+	{
+		"tahun": "2022",
+		"provinsi_short": "NTT",
+		"provinsi_alt_name": "NUSA TENGGARA TIMUR",
+		"elektifitas": 92.5,
+		"is_timur": true
+	}	
+]

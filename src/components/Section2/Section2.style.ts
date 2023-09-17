@@ -18,6 +18,13 @@ const useStyles = createStyles((theme) => ({
       fontSize: "25px",
     },
   },
+  map: {
+    height: "400px",
+  },
+  textDescription: {
+    fontSize: "14px",
+    textAlign: "right",
+  },
 }));
 
 export default useStyles;
