@@ -3,6 +3,7 @@ import { FC, PropsWithChildren, HTMLProps } from "react";
 
 type CardChartProps = PropsWithChildren<{
   colorScheme: "Dark" | "Light";
+  heightContainer?: string;
   height?: string;
   className?: HTMLProps<HTMLElement>["className"];
   title?: React.ReactNode;
@@ -16,6 +17,7 @@ const CardChart: FC<CardChartProps> = ({
   children,
   chart,
   colorScheme,
+  heightContainer,
 }) => {
   return (
     <div
@@ -32,12 +34,19 @@ const CardChart: FC<CardChartProps> = ({
       )}
 
       <div
+        className="overflow-x-auto"
         style={{
-          height: height,
+          height: heightContainer,
         }}
-        className={clsx(className, "my-5")}
       >
-        {chart}
+        <div
+          style={{
+            height: height,
+          }}
+          className={clsx(className, "my-5")}
+        >
+          {chart}
+        </div>
       </div>
 
       {children}

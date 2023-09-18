@@ -11,7 +11,8 @@ const useCommonStyle = createStyles((theme, { colorScheme }: Props) => {
       color: colorScheme === "Light" ? "#2A3028" : "white",
     },
     header: {
-      borderBottom: "5px solid #e8dc29",
+      borderBottom:
+        colorScheme === "Dark" ? "5px solid #e8dc29" : "5px solid #2A3028",
     },
   };
 });

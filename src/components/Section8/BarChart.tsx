@@ -14,7 +14,7 @@ const data = [
 ];
 
 const BarChart: FC<BarChartProps> = ({}) => {
-  const kemiskinan = useDataStore((state) => state.kemiskinan).slice(0, 16);
+  const kemiskinan = useDataStore((state) => state.kemiskinan).slice(0, 34);
   kemiskinan.reverse();
 
   return (
@@ -26,7 +26,7 @@ const BarChart: FC<BarChartProps> = ({}) => {
       layout="horizontal"
       keys={["kemiskinan"]}
       indexBy="provinsiShort"
-      margin={{ top: 0, right: 0, bottom: 0, left: 100 }}
+      margin={{ top: 0, right: 10, bottom: 0, left: 120 }}
       padding={0.3}
       valueScale={{ type: "linear" }}
       indexScale={{ type: "band", round: true }}

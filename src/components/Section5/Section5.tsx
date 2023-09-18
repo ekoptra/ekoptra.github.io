@@ -14,10 +14,10 @@ const Section5: React.FC = () => {
     <Container colorScheme="Light" className="pb-52">
       <hr className={cx(classes.line, "w-1/3 mb-10")} />
 
-      <h2 className="text-center px-32 leading-tight text-4xl mt-20">
+      <h2 className="text-center px-32 leading-tight text-4xl mt-32">
         Di kawasan timur Indonesia, terbentang dua cerita yang sungguh kontras
         mengenai ketahanan pangan. Antara{" "}
-        <b className="text-orange">Bali dan Papua.</b>
+        <TextBold className="text-orange">Bali dan Papua.</TextBold>
       </h2>
 
       <Grid className="mt-20" gutter={40} align="center">
@@ -73,6 +73,11 @@ const Section5: React.FC = () => {
                 <img src={berasImg} alt="Beras" className="h-32" />
                 <img src={berasImg} alt="Beras" className="h-32" />
                 <img src={berasImg} alt="Beras" className="h-32" />
+                <Flex direction="column" className="ml-5">
+                  <p className="text-5xl">680 </p>
+                  <TextPenjelasan>Ribu Ton</TextPenjelasan>
+                  <TextPenjelasan>Produksi Beras</TextPenjelasan>
+                </Flex>
               </Flex>
               <Flex align="end">
                 <img src={berasImg} alt="Beras" className="h-32" />
@@ -88,6 +93,11 @@ const Section5: React.FC = () => {
             <h3 className="font-semibold text-4xl mb-8">Papua</h3>
             <div>
               <Flex>
+                <Flex direction="column" className="mr-5">
+                  <p className="text-5xl">193 </p>
+                  <TextPenjelasan>Ribu Ton</TextPenjelasan>
+                  <TextPenjelasan>Produksi Beras</TextPenjelasan>
+                </Flex>
                 <img src={berasImg} alt="Beras" className="h-32" />
                 <img src={berasImg} alt="Beras" className="h-32" />
               </Flex>

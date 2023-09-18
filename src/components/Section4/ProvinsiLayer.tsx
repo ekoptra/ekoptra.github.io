@@ -28,7 +28,7 @@ const ProvinsiLayer: React.FC = () => {
               fill: true,
               fillOpacity: 1,
               fillColor: feature.properties.is_indonesia_timur
-                ? "#5B6456"
+                ? "#D9D9D9"
                 : "#D2D461",
               color: "#656565",
             }}

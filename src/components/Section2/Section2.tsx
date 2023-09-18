@@ -2,39 +2,49 @@ import React from "react";
 import useStyles from "./Section2.style";
 import MapComponent from "./MapComponent";
 import { Flex } from "@mantine/core";
+import Container from "../common/Container";
+import TextPenjelasan from "../common/TextPenjelasan";
+import TextBold from "../common/TextBold";
 
 const Section2: React.FC = () => {
   const { classes, cx } = useStyles();
 
   return (
-    <div className={cx(classes.wrapper)}>
-      <div className="pt-60 lg:px-28 md:px-20 sm:px-16 px-8">
-        <div className={cx(classes.header, "lg:w-1/3 sm:w-2/3 w-5/6")}>
-          <h2 className="leading-tight">
-            <span className="font-semibold text-yellow">Krisis Pangan </span>
-            yang Melekat di Papua
-          </h2>
-        </div>
-
-        <div>
-          <Flex justify="end" className="pr-28">
-            <p className={cx(classes.textDescription, "font-light w-1/3")}>
-              <b className="text-yellow">19 Kabupaten/Kota </b>
+    <Container
+      colorScheme="Dark"
+      header={
+        <>
+          <span className="font-semibold text-yellow">Krisis Pangan </span>
+          yang Melekat di Papua
+        </>
+      }
+      className="pt-72"
+    >
+      <div>
+        <Flex justify="end">
+          <TextPenjelasan className="w-1/2">
+            <p>
+              <TextBold className="text-yellow">19 Kabupaten/Kota </TextBold>
               di Pulau Papua selama 5 tahun terakhir menjadi wilayah yang sangat
               rentan terhadap pangan
             </p>
-          </Flex>
-          <MapComponent />
+          </TextPenjelasan>
+        </Flex>
 
-          <Flex justify="end" className="pr-28">
-            <p className={cx(classes.textDescription, "font-light w-1/3")}>
-              <b className="text-yellow">200 ribu jiwa </b>
+        <div className="my-16">
+          <MapComponent />
+        </div>
+
+        <Flex justify="start">
+          <TextPenjelasan className="w-1/2">
+            <p>
+              <TextBold className="text-yellow">2 juta 200 ribu jiwa</TextBold>{" "}
               terus berjuang melawan gelombang ketidakpastian pangan
             </p>
-          </Flex>
-        </div>
+          </TextPenjelasan>
+        </Flex>
       </div>
-    </div>
+    </Container>
   );
 };
 

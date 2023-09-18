@@ -49,7 +49,7 @@ const KabupatenLayer: React.FC = () => {
               data={feature}
               style={{
                 weight: 0.5,
-                fillColor: "#ff8e68",
+                fillColor: "#F39200",
                 fill: true,
                 fillOpacity: 1,
                 color: "#656565",

@@ -11,7 +11,16 @@ const iter = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 const Section9: FC = ({}) => {
   return (
-    <Container colorScheme="Dark" header="Sulitnya Akses Air Bersih">
+    <Container
+      colorScheme="Dark"
+      header={
+        <>
+          <TextBold className="text-yellow">Sulitnya </TextBold>
+          Akses Air Bersih
+        </>
+      }
+      className="pb-52"
+    >
       <Grid className="mt-10" align="center">
         <Grid.Col span={6}>
           <div className="pr-16">

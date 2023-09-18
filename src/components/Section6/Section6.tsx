@@ -2,11 +2,14 @@ import { FC } from "react";
 import Container from "../common/Container";
 import { Grid } from "@mantine/core";
 import CardPenyebab, { CardPenyebabProps } from "./CardPenyebab";
+import imgKemiskinan from "../../images/kemiskinan.jpg";
+import imgListrik from "../../images/listrik.jpeg";
+import imgAir from "../../images/air.jpg";
 
 const cardData: CardPenyebabProps[] = [
-  { text: "Sulitnya Akses Listrik yang Memadai" },
-  { text: "Tingginya Angka Kemiskinan" },
-  { text: "Sulitnya Akses Air Bersih" },
+  { text: "Sulitnya Akses Listrik yang Memadai", src: imgListrik },
+  { text: "Tingginya Angka Kemiskinan", src: imgKemiskinan },
+  { text: "Sulitnya Akses Air Bersih", src: imgAir },
 ];
 
 const Section6: FC = ({}) => {
@@ -17,9 +20,9 @@ const Section6: FC = ({}) => {
       </h2>
 
       <Grid className="mt-16" gutter={20}>
-        {cardData.map((d) => (
+        {cardData.map((d, i) => (
           <Grid.Col span={4}>
-            <CardPenyebab {...d} />
+            <CardPenyebab {...d} urutan={i + 1} />
           </Grid.Col>
         ))}
       </Grid>

@@ -5,6 +5,7 @@ import Container from "../common/Container";
 import TextPenjelasan from "../common/TextPenjelasan";
 import CardChart from "../common/CardChart";
 import TextBold from "../common/TextBold";
+import LegendComponent from "../common/LegendComponent";
 
 const Section6: FC = ({}) => {
   return (
@@ -12,8 +13,8 @@ const Section6: FC = ({}) => {
       colorScheme="Dark"
       header={
         <>
-          <TextBold className="text-yellow">Krisis Pangan </TextBold>
-          yang Melekat di Papua
+          <TextBold className="text-yellow">Sulitnya Akses </TextBold>
+          Listrik yang Memadai
         </>
       }
     >
@@ -34,23 +35,9 @@ const Section6: FC = ({}) => {
             height="300px"
             title="Rasio Elektrifikasi (%) di Indonesia Tahun 2022"
           >
-            <Flex gap={0} direction="column" align="end" className="pr-3">
-              <div>
-                <Flex align="center" gap={5}>
-                  <div
-                    className="h-3 w-3"
-                    style={{ backgroundColor: "#d9d9d9" }}
-                  ></div>
-                  <div className="text-sm">Indonesia Bagian Timur</div>
-                </Flex>
-                <Flex align="center" gap={5}>
-                  <div
-                    className="h-3 w-3"
-                    style={{ backgroundColor: "#d2d461" }}
-                  ></div>
-                  <div className="text-sm">Indonesia Bagian Barat</div>
-                </Flex>
-              </div>
+            <Flex gap={10} direction="row" justify="end" className="pr-3">
+              <LegendComponent tipe="timur" />
+              <LegendComponent tipe="barat" />
             </Flex>
           </CardChart>
         </Grid.Col>
