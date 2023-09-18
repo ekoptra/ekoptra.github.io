@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/static/css/main.2b1090de.css",
+    "main.js": "/static/js/main.321d672e.js",
+    "static/media/bpn.png": "/static/media/bpn.1584ce648bba5134e055.png",
+    "static/media/bg1.webp": "/static/media/bg1.2ff594d1407e6074d2e2.webp",
+    "static/media/air.jpg": "/static/media/air.ac080586453fa829b1c7.jpg",
+    "static/media/listrik.jpeg": "/static/media/listrik.46183314902e9a06764d.jpeg",
+    "static/media/kemiskinan.jpg": "/static/media/kemiskinan.3256bc1459ee8c0a2183.jpg",
+    "static/media/beras.png": "/static/media/beras.4b96548b5762dbb7483c.png",
+    "index.html": "/index.html",
+    "main.2b1090de.css.map": "/static/css/main.2b1090de.css.map",
+    "main.321d672e.js.map": "/static/js/main.321d672e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2b1090de.css",
+    "static/js/main.321d672e.js"
+  ]
+}
