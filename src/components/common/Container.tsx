@@ -16,13 +16,13 @@ const Container: FC<ContainerProps> = ({
   const { classes, cx } = useCommonStyle({ colorScheme });
 
   return (
-    <div className={cx(classes.wrapper, className, "pt-40")}>
-      <div className="container mx-auto px-16">
+    <div className={cx(classes.wrapper, className, "xl:pt-40 lg:pt-32")}>
+      <div className="container mx-auto 2xl:px-16 px-8">
         {header && (
           <div
             className={cx(
               classes.header,
-              "lg:w-2/5 sm:w-2/3 w-5/6 mb-12 pb-8 text-4xl"
+              "xl:w-2/5  2xl:mb-12 mb-8 pb-8 xl:text-4xl lg:text-3xl"
             )}
           >
             <h2 className="leading-tight">{header}</h2>

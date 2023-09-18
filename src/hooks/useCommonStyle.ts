@@ -12,7 +12,7 @@ const useCommonStyle = createStyles((theme, { colorScheme }: Props) => {
     },
     header: {
       borderBottom:
-        colorScheme === "Dark" ? "5px solid #e8dc29" : "5px solid #2A3028",
+        colorScheme === "Dark" ? "5px solid #e8dc29" : "5px solid #f39200",
     },
   };
 });

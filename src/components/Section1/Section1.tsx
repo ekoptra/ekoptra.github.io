@@ -20,16 +20,11 @@ const Section1: React.FC = () => {
   const { classes, cx } = useStyles({ isHeadingAppear });
 
   return (
-    <div className={cx(classes.wrapper, "relative")}>
+    <div className={cx(classes.wrapper, "sticky top-0 -z-10")}>
       <div
-        className={cx(
-          classes.container,
-          classes.transition,
-          "w-full sticky top-0",
-          {
-            [classes.zoomIn]: !isHeadingAppear,
-          }
-        )}
+        className={cx(classes.container, classes.transition, {
+          [classes.zoomIn]: !isHeadingAppear,
+        })}
       >
         <div className="flex w-100 h-full items-center justify-center bg-black bg-opacity-60 relative">
           <h1
@@ -40,8 +35,8 @@ const Section1: React.FC = () => {
               { ["opacity-0"]: !isHeadingAppear }
             )}
           >
-            Sampai kapan Kawasan Timur Indonesia berada dalam wilayah rawan
-            pangan?
+            Kerawanan Pangan yang melanda Sang Permata Timur Indonesia, Pulau
+            Papua
           </h1>
 
           <div
@@ -64,13 +59,6 @@ const Section1: React.FC = () => {
           </div>
         </div>
       </div>
-
-      <div
-        className={cx(classes.gradient, "absolute left-0 right-0")}
-        style={{
-          background: "linear-gradient(rgba(42, 48, 40, 0), #2A3028)",
-        }}
-      ></div>
     </div>
   );
 };

@@ -14,7 +14,7 @@ const cardData: CardPenyebabProps[] = [
 
 const Section6: FC = ({}) => {
   return (
-    <Container colorScheme="Dark">
+    <Container colorScheme="Dark" className="z-auto">
       <h2 className="text-center text-yellow italic text-3xl font-semibold">
         Bagaimana rentannya pangan di Papua ini bisa terjadi?
       </h2>

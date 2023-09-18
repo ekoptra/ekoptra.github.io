@@ -3,8 +3,7 @@ import { FC, PropsWithChildren, HTMLProps } from "react";
 
 type CardChartProps = PropsWithChildren<{
   colorScheme: "Dark" | "Light";
-  heightContainer?: string;
-  height?: string;
+  classNameWrapper?: HTMLProps<HTMLElement>["className"];
   className?: HTMLProps<HTMLElement>["className"];
   title?: React.ReactNode;
   chart: React.ReactNode;
@@ -12,12 +11,11 @@ type CardChartProps = PropsWithChildren<{
 
 const CardChart: FC<CardChartProps> = ({
   title,
-  height,
   className,
   children,
   chart,
   colorScheme,
-  heightContainer,
+  classNameWrapper,
 }) => {
   return (
     <div
@@ -29,24 +27,19 @@ const CardChart: FC<CardChartProps> = ({
     >
       {title && (
         <div>
-          <h3 className="text-center text-xl font-semibold px-4">{title}</h3>
+          <h3 className="text-center text-xl font-semibold px-4 mb-4">
+            {title}
+          </h3>
         </div>
       )}
 
       <div
-        className="overflow-x-auto"
-        style={{
-          height: heightContainer,
-        }}
+        className={clsx(
+          "overflow-x-hidden scroll-inside-page",
+          classNameWrapper
+        )}
       >
-        <div
-          style={{
-            height: height,
-          }}
-          className={clsx(className, "my-5")}
-        >
-          {chart}
-        </div>
+        <div className={clsx(className)}>{chart}</div>
       </div>
 
       {children}

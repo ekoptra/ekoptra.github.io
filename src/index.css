@@ -21,6 +21,10 @@ body {
   width: 4px;
 }
 
+.scroll-inside-page::-webkit-scrollbar {
+  width: 2px;
+}
+
 /* Track */
 ::-webkit-scrollbar-track {
   background: #f1f1f1;

@@ -1,5 +1,6 @@
 import { Card, Flex, Image, clsx } from "@mantine/core";
 import React, { FC } from "react";
+import useStyles from "./Section6.style";
 
 export type CardPenyebabProps = {
   text: string;
@@ -12,6 +13,7 @@ const CardPenyebab: FC<CardPenyebabProps & { urutan: number }> = ({
   urutan,
 }) => {
   const [isHover, setIsHover] = React.useState(false);
+  const { classes, cx } = useStyles();
 
   return (
     <Card
@@ -20,16 +22,16 @@ const CardPenyebab: FC<CardPenyebabProps & { urutan: number }> = ({
       onMouseLeave={() => setIsHover(false)}
     >
       <Card.Section>
-        <Image
+        <img
           src={src}
-          height={600}
-          className={clsx(
-            "transition-all duration-500",
+          className={cx(
+            classes.image,
+            "transition-all duration-500 object-cover",
             isHover ? "scale-110" : "scale-100"
           )}
         />
         <div
-          className={clsx(
+          className={cx(
             "bg-black transition-all duration-1000 absolute top-0 right-0 left-0 bottom-0",
             isHover ? "bg-opacity-20" : "bg-opacity-40"
           )}

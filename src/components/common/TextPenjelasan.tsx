@@ -7,7 +7,7 @@ type Props = PropsWithChildren<{
 
 const TextPenjelasan: FC<Props> = ({ children, className }) => {
   return (
-    <div className={clsx(className, "text-2xl leading-relaxed")}>
+    <div className={clsx(className, "xl:text-2xl lg:text-xl leading-relaxed")}>
       {children}
     </div>
   );

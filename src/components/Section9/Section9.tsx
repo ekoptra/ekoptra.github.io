@@ -19,7 +19,7 @@ const Section9: FC = ({}) => {
           Akses Air Bersih
         </>
       }
-      className="pb-52"
+      className="pb-52 sticky top-0 -z-10 xl:pt-16"
     >
       <Grid className="mt-10" align="center">
         <Grid.Col span={6}>

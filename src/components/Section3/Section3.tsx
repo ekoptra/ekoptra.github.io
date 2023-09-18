@@ -10,13 +10,13 @@ import TextBold from "../common/TextBold";
 const Section3: React.FC = () => {
   const { classes, cx } = useStyles();
   return (
-    <Container colorScheme="Dark" className="pb-52">
+    <Container colorScheme="Dark" className="pb-52 sticky top-0 -z-10 xl:pt-12">
       <Grid align="center">
         <Grid.Col span={5}>
           <Card radius={20} className={cx(classes.card, "p-8")}>
             <Image maw={240} mx="auto" src={bpn} alt="Badan Pangan Nasional" />
             <div className="mt-8">
-              <TextPenjelasan className="">
+              <TextPenjelasan>
                 <p>
                   Ketahanan pangan tidak hanya mencakup{" "}
                   <TextBold>ketersediaan pangan</TextBold> untuk dikonsumsi
@@ -25,7 +25,7 @@ const Section3: React.FC = () => {
                 </p>
               </TextPenjelasan>
 
-              <TextPenjelasan className="mt-8 ">
+              <TextPenjelasan className="mt-8">
                 <p>
                   Badan Pangan Nasional (BPN) membentuk{" "}
                   <TextBold>Indeks Ketahanan Pangan (IKP)</TextBold>

@@ -7,7 +7,7 @@ type Props = {
 
 const useStyles = createStyles((theme, { isHeadingAppear }: Props) => ({
   wrapper: {
-    minHeight: "160vh",
+    minHeight: "150vh",
     overflowX: "clip",
   },
   transition: {
@@ -75,10 +75,6 @@ const useStyles = createStyles((theme, { isHeadingAppear }: Props) => ({
     [theme.fn.smallerThan("md")]: {
       fontSize: "12px",
     },
-  },
-  gradient: {
-    height: "60vh",
-    bottom: "-20vh",
   },
 }));
 

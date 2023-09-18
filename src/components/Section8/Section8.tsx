@@ -6,8 +6,11 @@ import TextPenjelasan from "../common/TextPenjelasan";
 import TextBold from "../common/TextBold";
 import CardChart from "../common/CardChart";
 import LegendComponent from "../common/LegendComponent";
+import useStyles from "./Section8.style";
 
 const Section8: FC = ({}) => {
+  const { classes } = useStyles();
+
   return (
     <Container
       colorScheme="Dark"
@@ -51,8 +54,8 @@ const Section8: FC = ({}) => {
           <CardChart
             colorScheme="Dark"
             chart={<BarChart />}
-            heightContainer="500px"
-            height="1000px"
+            classNameWrapper={classes.chartCardWrapper}
+            className={classes.chartCard}
             title="Persentase Kemiskinan Tahun 2022"
           >
             <Flex gap={10} direction="row" justify="end" className="pr-3 mt-3">

@@ -6,8 +6,10 @@ import TextPenjelasan from "../common/TextPenjelasan";
 import CardChart from "../common/CardChart";
 import TextBold from "../common/TextBold";
 import LegendComponent from "../common/LegendComponent";
+import useStyles from "./Section7.style";
 
 const Section6: FC = ({}) => {
+  const { classes } = useStyles();
   return (
     <Container
       colorScheme="Dark"
@@ -32,7 +34,7 @@ const Section6: FC = ({}) => {
           <CardChart
             colorScheme="Dark"
             chart={<BarChart />}
-            height="300px"
+            className={classes.chartCard}
             title="Rasio Elektrifikasi (%) di Indonesia Tahun 2022"
           >
             <Flex gap={10} direction="row" justify="end" className="pr-3">
@@ -43,7 +45,7 @@ const Section6: FC = ({}) => {
         </Grid.Col>
 
         <Grid.Col span={4}>
-          <TextPenjelasan className="pl-12">
+          <TextPenjelasan className="2xl:pl-12 pl-6">
             <TextBold className="text-3xl text-yellow">
               3 dari 34 Provinsi{" "}
             </TextBold>

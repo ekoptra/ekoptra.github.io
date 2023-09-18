@@ -45,8 +45,8 @@ const CardKebijakan: FC<PropsCardKebijakan> = ({ icon, text }) => {
 
 const Section10: FC = ({}) => {
   return (
-    <Container colorScheme="Light" className="pb-8">
-      <h2 className="text-center px-32 leading-tight text-4xl">
+    <Container colorScheme="Light" className="pb-8 z-10">
+      <h2 className="text-center px-32 leading-tight 2xl:text-4xl text-3xl">
         Apa yang{" "}
         <TextBold className="text-orange">telah Pemerintah lakukan</TextBold>{" "}
         untuk mengatasi masalah kerentanan pangan di Papua ini?
@@ -64,10 +64,10 @@ const Section10: FC = ({}) => {
             <IconFlame height="100%" width="100%" />
           </div>
           <div>
-            <TextPenjelasan className="text-4xl leading-tight">
+            <p className="2xl:text-4xl xl:text-3xl leading-tight">
               Let’s take action, take decision and take the risk
-            </TextPenjelasan>
-            <p className="text-xl leading-tight mt-6">
+            </p>
+            <p className="2xl:text-xl text-lg leading-tight mt-6">
               Semoga Papua dan Kawasan Indonesia Timur bisa cepat keluar dari
               belenggu kerentanan pangan
             </p>
